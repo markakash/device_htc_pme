@@ -91,9 +91,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml \
-    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml \
-    $(LOCAL_PATH)/configs/com.htc.software.market.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.htc.software.market.xml \
-    $(LOCAL_PATH)/configs/htcsenseframework.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/htcsenseframework.xml
+    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
 # Vendor properties
 -include $(LOCAL_PATH)/vendor_prop.mk

@@ -80,8 +80,6 @@ extern "C" void* _ZN7android21SurfaceComposerClient13createSurfaceERKNS_7String8
                                                         android::LayerMetadata metadata,
                                                         uint32_t* outTransformHint);
 
-
-
 extern "C" void* _ZN7android21SurfaceComposerClient13createSurfaceERKNS_7String8Ejjij(
     const android::String8& name, uint32_t w, uint32_t h, PixelFormat format,
     uint32_t flags) {

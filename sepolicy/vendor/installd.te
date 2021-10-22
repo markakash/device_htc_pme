@@ -1,3 +1,0 @@
-allow installd idmap:process noatsecure;
-allow installd system_data_file:file { open read };
-

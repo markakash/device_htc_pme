@@ -47,7 +47,7 @@ TARGET_USES_64_BIT_BINDER := true
 BUILD_BROKEN_DUP_RULES := true
 
 # Use Snapdragon LLVM, if available
-TARGET_USE_SDCLANG := true
+#TARGET_USE_SDCLANG := true
 
 # Bootanimation
 TARGET_BOOTANIMATION_PRELOAD := true
@@ -238,9 +238,10 @@ TARGET_LD_SHIM_LIBS := \
     /system/lib64/lib-imsvideocodec.so|/system/vendor/lib64/libshim_ims.so
 
 # Selinux
+SELINUX_IGNORE_NEVERALLOWS := true
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
 # Treble
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true

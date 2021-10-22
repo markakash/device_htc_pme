@@ -1,2 +1,0 @@
-#============= ueventd ==============
-dontaudit ueventd mba_debug_dev:blk_file { open read };

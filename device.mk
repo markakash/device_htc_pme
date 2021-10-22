@@ -25,6 +25,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/htc/pme/pme-vendor.mk)
 
+# HIDL HALs
+$(call inherit-product, $(LOCAL_PATH)/hidl.mk)
+
+# Platform
+PRODUCT_USES_QCOM_HARDWARE := true
+PRODUCT_BOARD_PLATFORM := msm8996
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
@@ -163,7 +170,6 @@ PRODUCT_PACKAGES += \
     com.qualcomm.qti.camera \
     libmm-qcamera \
     Snap \
-    libshim_camera \
     libshim_stillmore \
     libshim_ppe \
     libion
@@ -178,10 +184,6 @@ PRODUCT_PACKAGES += \
     com.quicinc.cne \
     libcnefeatureconfig \
     services-ext
-
-# GestureHandler
-PRODUCT_PACKAGES += \
-    GestureHandler
 
 # Component overrides
 PRODUCT_COPY_FILES += \
@@ -502,9 +504,9 @@ PRODUCT_PACKAGES += \
     qti_telephony_utils.xml \
     libshim_ims
 
-PRODUCT_BOOT_JARS += \
-    ims-ext-common_system \
-    telephony-ext
+#PRODUCT_BOOT_JARS += \
+#    ims-ext-common_system \
+#    telephony-ext
 
 # Tethering
 PRODUCT_PACKAGES += \

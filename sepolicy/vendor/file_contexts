@@ -19,12 +19,6 @@
 /dev/block/platform/soc/7464900\.sdhci/by-name/frp                                              u:object_r:frp_block_device:s0
 /dev/block/bootdevice/by-name/frp                                                               u:object_r:frp_block_device:s0
 
-/dev/block/platform/soc/7464900\.sdhci/by-name/carrier                                          u:object_r:carrier_block_device:s0
-/dev/block/bootdevice/by-name/carrier                                                           u:object_r:carrier_block_device:s0
-
-/dev/block/platform/soc/7464900\.sdhci/by-name/dsp                                              u:object_r:dsp_block_device:s0
-/dev/block/bootdevice/by-name/dsp                                                               u:object_r:dsp_block_device:s0
-
 /dev/block/platform/soc/7464900\.sdhci/by-name/extra                                            u:object_r:forceencrypt_block_device:s0
 /dev/block/bootdevice/by-name/extra                                                             u:object_r:forceencrypt_block_device:s0
 
@@ -34,11 +28,7 @@
 # data
 /data/vendor/misc/audio/acdbdata/delta(/.*)?                                                    u:object_r:acdbdelta_vendor_data_file:s0
 
-# Dumpstate HAL
-/(vendor|system/vendor)/bin/hw/android\.hardware\.dumpstate@1\.1-service-pme                    u:object_r:hal_dumpstate_impl_exec:s0
-
 # Fingerprint
-/dev/htc_smi                                                                                    u:object_r:fpc1155_device:s0
 /data/fpc(/.*)?                                                                                 u:object_r:fingerprintd_data_file:s0
 /sys/devices/soc/soc:fp_fpc1155(/.*)?                                                           u:object_r:sysfs_fpc_irq:s0
 
@@ -82,4 +72,3 @@
 
 # vendor
 /vendor/bin/tftp_server                                                                         u:object_r:rfs_access_exec:s0
-
